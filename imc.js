@@ -12,13 +12,18 @@ function calcularIMC() {
     
     if (imc < 18.5) {
         classificacao = 'Abaixo do peso'
+        cor = 'green'
     } else if (imc < 24.9) {
         classificacao = 'Peso normal'
+        cor = 'blue'
     } else if (imc < 29.9) {
         classificacao = 'Sobrepeso'
+        cor = 'orange'
     } else {
         classificacao = 'Obesidade'
+        cor = 'red'
     }
     
     document.getElementById("resultado").textContent = `IMC: ${imc.toFixed(2)} - ${classificacao}`
+    resultado.style.color = cor
 }
