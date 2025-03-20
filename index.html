@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+
+<body onload="listar()">
+    <h2>Arrays</h2>
+    <label>Informe veiculo que deseja adicionar</label>
+    <input type="text" placeholder="EX: Corsa" id="carro" />
+    <button onclick="add()">Inserir</button>
+    <hr />
+    <p>Carros:<span id="garagem"></span></p>
+    <ul>
+        <!--Item via Javascript-->
+    </ul>
+    <script src="script.js"></script>
 </body>
+
 </html>
