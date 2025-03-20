@@ -4,6 +4,10 @@ const cars = ['opala', 'fusca', 'TL']
         //cars.shift()//remove o 1º
         document.getElementById('garagem').innerHTML = cars.toString()
         
+        function ativarBotao(){
+            document.getElementsByTagName('button')[0].disabled = document.getElementById('carro').value != ''
+        }
+
         function listar(){
             itemLista = ''
         for (let index = 0; index < cars.length; index++) {
@@ -14,6 +18,12 @@ const cars = ['opala', 'fusca', 'TL']
 
         function add() {
             var carro = document.getElementById('carro')
-            cars.push(carro.value)
+            if(document.getElementById('onde').checked){
+                cars.unshift(carro.value)
+            }else{
+                cars.push(carro.value)
+            }
+            document.getElementById('carro').value = ''
             listar()
+            document.getElementsByTagName('button')[0].disabled = true
         }

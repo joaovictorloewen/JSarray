@@ -10,8 +10,12 @@
 <body onload="listar()">
     <h2>Arrays</h2>
     <label>Informe veiculo que deseja adicionar</label>
-    <input type="text" placeholder="EX: Corsa" id="carro" />
-    <button onclick="add()">Inserir</button>
+    <input type="text" placeholder="EX: Corsa" id="carro" onkeypress="ativarBotao()" />
+    <button onclick="add()" disabled>Inserir</button>
+    
+    <input type="checkbox" checked id="onde" />
+    <label>Inserir no inicio?</label>
+
     <hr />
     <p>Carros:<span id="garagem"></span></p>
     <ul>
