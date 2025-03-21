@@ -24,6 +24,6 @@ function calcularIMC() {
         cor = 'red'
     }
     
-    document.getElementById("resultado").textContent = `IMC: ${imc.toFixed(2)} - ${classificacao}`
-    resultado.style.color = cor
+    document.getElementById('resultado').textContent = `IMC: ${imc.toFixed(2)} - ${classificacao}`
+    document.getElementById('resultado').style.color = cor
 }
